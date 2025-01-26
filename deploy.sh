@@ -12,6 +12,7 @@ mkdir -p dist
 echo "Copying files to deployment directory..."
 cp -r dist/* /path/to/hostinger/public_html/
 cp .htaccess /path/to/hostinger/public_html/
+cp mime.types /path/to/hostinger/public_html/
 
 # Set permissions
 echo "Setting permissions..."

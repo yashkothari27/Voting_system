@@ -10,6 +10,13 @@
   RewriteRule ^ index.html [QSA,L]
 </IfModule>
 
+# Set correct MIME types
+AddType application/javascript .js
+AddType application/javascript .mjs
+AddType text/javascript .js
+AddType text/javascript .mjs
+AddType application/json .json
+
 # Enable CORS
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
@@ -21,8 +28,9 @@ Header set X-Frame-Options "DENY"
 Header set X-XSS-Protection "1; mode=block"
 
 # Cache control
-<FilesMatch "\.(css|js)$">
+<FilesMatch "\.(css|js|mjs)$">
   Header set Cache-Control "max-age=31536000, public"
+  Header set Content-Type "application/javascript" env=IS_JS
 </FilesMatch>
 
 <FilesMatch "\.(jpg|jpeg|png|gif|ico)$">

@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: './',
   define: {
     'process.env': {},
   },
@@ -18,6 +18,10 @@ export default defineConfig({
           vendor: ['react', 'react-dom', 'react-router-dom'],
           web3: ['web3', 'ethers'],
         },
+        format: 'es',
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       },
     },
   },
