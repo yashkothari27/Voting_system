@@ -1,0 +1,24 @@
+.voter-registration {
+  text-align: center;
+}
+
+.registration-form {
+  margin-top: 2rem;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.registration-form input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.registration-form .button {
+  margin-top: 1rem;
+} 

@@ -1,0 +1,40 @@
+.home {
+  text-align: center;
+  padding: 2rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 1rem 0 3rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-buttons .button {
+  text-decoration: none;
+} 
